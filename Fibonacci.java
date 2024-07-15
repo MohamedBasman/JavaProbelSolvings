@@ -12,16 +12,17 @@ public class Fibonacci {
         } else if (n == 0) {
             System.out.println(a);
         } else if (n == 1) {
-            System.out.println(b);
+            System.out.println(a + ", " + b);
         } else {
-            for (int i = 2; i <= n; i++) {
+            System.out.print(a + ", " + b);
+            for (int i = 2; i < n; i++) {
                 sum = a + b;
                 a = b;
                 b = sum;
+                System.out.print(", " + sum);
             }
-            System.out.println(sum);
+            System.out.println();
         }
         s.close();
     }
 }
-
